@@ -1,0 +1,5 @@
+{
+  "name": "Hero Dispatch: Crisis Command",
+  "description": "A strategy game where you manage a team of 5 unique heroes. Analyze incoming procedurally generated threats and dispatch the right team members based on their attributes (Intelligence, Agility, Fearlessness, Durability, Charisma).",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Dispatch: Crisis Command</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'tech-dark': '#050a10',
+              'tech-panel': '#0f172a',
+              'tech-teal': '#2dd4bf',
+              'tech-orange': '#fb923c',
+              'stat-int': '#60a5fa',
+              'stat-agi': '#facc15',
+              'stat-fear': '#f87171',
+              'stat-dur': '#4ade80',
+              'stat-cha': '#c084fc',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050a10;
+        color: #f8fafc;
+        font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        overflow: hidden;
+      }
+      
+      /* CRT Effect Layer */
+      .crt::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        z-index: 50;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+      }
+      
+      .crt::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(18, 16, 16, 0.1);
+        opacity: 0;
+        z-index: 50;
+        pointer-events: none;
+        animation: flicker 0.15s infinite;
+      }
+
+      @keyframes flicker {
+        0% { opacity: 0.027906; }
+        5% { opacity: 0.048754; }
+        10% { opacity: 0.024945; }
+        15% { opacity: 0.020625; }
+        20% { opacity: 0.041386; }
+        25% { opacity: 0.017701; }
+        30% { opacity: 0.055646; }
+        35% { opacity: 0.048348; }
+        40% { opacity: 0.043238; }
+        45% { opacity: 0.051718; }
+        50% { opacity: 0.033632; }
+        55% { opacity: 0.049108; }
+        60% { opacity: 0.059374; }
+        65% { opacity: 0.045213; }
+        70% { opacity: 0.057963; }
+        75% { opacity: 0.028257; }
+        80% { opacity: 0.051647; }
+        85% { opacity: 0.057662; }
+        90% { opacity: 0.038575; }
+        95% { opacity: 0.054036; }
+        100% { opacity: 0.024012; }
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2dd4bf; 
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #14b8a6; 
+      }
+      
+      .clip-corner {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
+      }
+      
+      .clip-corner-top {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root" class="h-screen w-screen overflow-hidden bg-tech-dark crt"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
