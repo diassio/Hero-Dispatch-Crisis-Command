@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed on your machine:
 1.  **Clone the repository** (or download the source code):
     ```bash
     git clone git@github.com:diassio/Hero-Dispatch-Crisis-Command.git
-    cd Dispatch-clone
+    cd Hero-Dispatch-Crisis-Command
     ```
 
 2.  **Install dependencies**:
