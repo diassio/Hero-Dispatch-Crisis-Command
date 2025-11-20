@@ -11,6 +11,14 @@
 *   **Active Task Visualization**: View real-time progress and stat comparisons for active missions.
 *   **Reputation System**: Success builds city trust; failure leads to chaos.
 
+## Gameplay
+
+![Mission Control Dashboard](public/screenshots/dashboard.png)
+*Tactical Map Interface - Monitor sector alerts and track squad movements in real-time.*
+
+![Mission Briefing](public/screenshots/mission-briefing.png)
+*Mission Briefing - Analyze threat levels and dispatch the perfect squad for the job.*
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
@@ -22,7 +30,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 1.  **Clone the repository** (or download the source code):
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:diassio/Hero-Dispatch-Crisis-Command.git
     cd Dispatch-clone
     ```
 
